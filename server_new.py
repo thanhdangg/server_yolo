@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 import torch
 import firebase_admin
 from firebase_admin import db, credentials, storage
@@ -102,6 +102,9 @@ def process_image(file_name):
 ref = db.reference('/')
 ref.listen(listener)
 
+@app.route('/test', methods=['GET'])
+def test():
+    return jsonify({'predictions': 'test'})
 
 if __name__ == "__main__":
     app.run(debug=True)

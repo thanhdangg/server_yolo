@@ -1,0 +1,9 @@
+Flask
+firebase-admin
+torch
+torchvision
+opencv-python-headless
+Pillow
+numpy
+pandas
+scipy
